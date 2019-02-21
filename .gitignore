@@ -1,0 +1,9 @@
+/node_modules
+/.idea
+/.vagrant
+npm-debug.log
+yarn-error.log
+.env
+.nuxt
+/dist
+/public/_nuxt
