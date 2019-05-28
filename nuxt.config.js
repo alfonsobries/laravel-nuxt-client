@@ -46,18 +46,15 @@ module.exports = {
     middleware: ['locale', 'check-auth']
   },
 
-  css: [
-    { src: '~assets/sass/app.scss', lang: 'scss' }
-  ],
+  css: ['@/assets/css/main.css'],
 
   plugins: [
     '~components/global',
     '~plugins/i18n',
     '~plugins/vform',
     '~plugins/axios',
-    '~plugins/fontawesome',
+    '~plugins/vue-tailwind',
     // '~plugins/nuxt-client-init',
-    { src: '~plugins/bootstrap', ssr: false }
   ],
 
   modules: [

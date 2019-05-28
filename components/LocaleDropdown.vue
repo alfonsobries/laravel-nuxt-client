@@ -1,16 +1,23 @@
 <template>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" role="button"
-       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      {{ locales[locale] }}
-    </a>
-    <div class="dropdown-menu">
-      <a v-for="(value, key) in locales" :key="key" class="dropdown-item" href="#"
-         @click.prevent="setLocale(key)">
-        {{ value }}
-      </a>
-    </div>
-  </li>
+  <t-dropdown
+    :text="locales[locale]"
+    :button-props="{ baseClass: 'flex items-center focus:outline-none', defaultClass: '', defaultSizeClass: ''}"
+    tag-name="li"
+    placement="bottom-start"
+  >
+    <ul>
+      <li 
+        v-for="(value, key) in locales" 
+        :key="key" >
+        <a
+          class="block no-underline px-4 py-2 hover:bg-blue-500 hover:text-white" 
+          href="#"
+          @click.prevent="setLocale(key)">
+          {{ value }}
+        </a>
+      </li>
+    </ul>
+  </t-dropdown>
 </template>
 
 <script>

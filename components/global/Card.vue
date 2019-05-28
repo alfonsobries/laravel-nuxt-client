@@ -1,12 +1,6 @@
 <template>
-  <div class="card">
-    <div v-if="title" class="card-header">
-      {{ title }}
-    </div>
-
-    <div class="card-body">
-      <slot/>
-    </div>
+  <div class="border bg-white">
+    <slot/>
   </div>
 </template>
 
@@ -15,7 +9,10 @@ export default {
   name: 'Card',
 
   props: {
-    title: { type: String, default: null }
+    title: {
+      type: String,
+      default: null
+    }
   }
 }
 </script>
